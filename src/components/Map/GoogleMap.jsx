@@ -48,6 +48,24 @@ const GoogleMapBasic = () => {
           }}
         />
       ))}
+      
+      {/* 지도 마커 정보 창 추가 */}
+      {selected && (
+        <InfoWindow
+          position={selected.position}
+          onCloseClick={() => setSelected(null)}
+        >
+          <div style={{ minWidth: 180, color: 'black', background: 'white', padding: 12, borderRadius: 12, boxShadow: '0 2px 8px rgba(0,0,0,0.15)' }}>
+            <img src={selected.thumbnail} alt={selected.name} style={{ width: 60, height: 60, borderRadius: 8, objectFit: 'cover', marginBottom: 8, display: 'block', marginLeft: 'auto', marginRight: 'auto' }} />
+            <h3 style={{ margin: '8px 0 4px 0', fontSize: 18, textAlign: 'center' }}>{selected.name}</h3>
+            <p style={{ margin: 0, fontSize: 14, textAlign: 'center' }}>{selected.address}</p>
+            <p style={{ margin: 0, fontSize: 13, textAlign: 'center', color: '#666' }}>
+              평점: {selected.rating} ({selected.user_ratings_total}명)
+            </p>
+          </div>
+        </InfoWindow>
+      )}
+
     </GoogleMap>
   );
 };
