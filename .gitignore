@@ -1,0 +1,47 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependency directories
+node_modules/
+
+# Build outputs
+dist/
+dist-ssr/
+build/
+.out/
+.next/
+.vercel/
+
+# Local env files
+.env
+.env.*         # 예: .env.local, .env.production 등
+!.env.example  # 공유 가능한 예시 파일은 제외
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor settings
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional: lock files (필요에 따라 선택)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
