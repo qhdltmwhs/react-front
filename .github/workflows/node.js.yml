@@ -35,7 +35,7 @@ jobs:
         args: --acl public-read --follow-symlinks --delete
       env:
         SOURCE_DIR: './dist'
-        REACT_APP_GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
+        VITE_GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
         AWS_REGION: 'ap-northeast-2'
         AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
